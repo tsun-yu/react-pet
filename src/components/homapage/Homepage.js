@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { connect } from "react-redux";
+import React, { useEffect } from "react";
 import DonateButton from "../common/DonateButton";
 import Page1 from "./Page1";
 import Page2 from "./Page2";
@@ -29,9 +28,9 @@ function Homepage(props) {
   );
 }
 
-const mapStateToProps = (store) => {
-  return {};
-};
-const mapDispatchToProps = null;
+// const mapStateToProps = (store) => {
+//   return {};
+// };
+// const mapDispatchToProps = null;
 
 export default Homepage;

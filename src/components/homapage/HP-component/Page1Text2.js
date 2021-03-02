@@ -1,13 +1,13 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 
 function Page1Text2(props) {
   const {} = props;
   return (
     <>
-      <div className="page1left-2">
-        <div className="page1des">
+      <div className="page1left-1">
+        <div className="page1des sm">
           It's not coincidence about meet our furbaby.
         </div>
         <div className="page1des2 d-flex flex-column justify-content-around">
@@ -30,9 +30,9 @@ function Page1Text2(props) {
   );
 }
 
-const mapStateToProps = (store) => {
-  return {};
-};
-const mapDispatchToProps = null;
+// const mapStateToProps = (store) => {
+//   return {};
+// };
+// const mapDispatchToProps = null;
 
 export default withRouter(Page1Text2);

@@ -1,24 +1,22 @@
-import React, { useState, useEffect } from 'react'
-import Page1Carousel from './HP-component/Page1Carousel'
-
-import Page1Text1 from './HP-component/Page1Text1'
-import Page1Text2 from './HP-component/Page1Text2'
+import React, { useEffect } from "react";
+import Page1Carousel from "./HP-component/Page1Carousel";
+import Page1Text1 from "./HP-component/Page1Text1";
+import Page1Text2 from "./HP-component/Page1Text2";
 
 function Page1(props) {
   useEffect(() => {
-    let newIndex = 0
+    let newIndex = 0;
 
     const interval = setInterval(() => {
-      newIndex > 3 && (newIndex = 0)
-
-      let slide = newIndex * -70
-      document.querySelector('.page1left-wrap').style.top = slide + 'vh'
-      newIndex++
-    }, 2000)
+      newIndex > 3 && (newIndex = 0);
+      let slide = newIndex * -70;
+      document.querySelector(".page1left-wrap").style.top = slide + "vh";
+      newIndex++;
+    }, 2000);
     return () => {
-      clearInterval(interval)
-    }
-  }, [])
+      clearInterval(interval);
+    };
+  }, []);
   return (
     <>
       {/* scroll svg */}
@@ -87,7 +85,7 @@ function Page1(props) {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Page1
+export default Page1;

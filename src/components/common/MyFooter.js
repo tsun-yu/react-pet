@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../../styles/custom.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

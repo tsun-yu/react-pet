@@ -1,9 +1,8 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 
 function Page1Text1(props) {
-  const {} = props;
   return (
     <>
       <div className="page1left-1">
@@ -28,9 +27,9 @@ function Page1Text1(props) {
   );
 }
 
-const mapStateToProps = (store) => {
-  return {};
-};
-const mapDispatchToProps = null;
+// const mapStateToProps = (store) => {
+//   return {};
+// };
+// const mapDispatchToProps = null;
 
 export default withRouter(Page1Text1);

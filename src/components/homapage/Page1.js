@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import Page1Carousel from "./HP-component/Page1Carousel";
-import Page1Text1 from "./HP-component/Page1Text1";
-import Page1Text2 from "./HP-component/Page1Text2";
+import Page1Carousel from "./HP-component/page1component/Page1Carousel";
+import Page1Text1 from "./HP-component/page1component/Page1Text1";
+import Page1Text2 from "./HP-component/page1component/Page1Text2";
 
 function Page1(props) {
   useEffect(() => {
@@ -76,11 +76,10 @@ function Page1(props) {
         </div>
         <div className="page1right position-absolute">
           <Page1Carousel
-            img1="/image/homepage/homepage1-1.png"
-            img2="/image/homepage/homepage1-2.png"
-            img3="/image/homepage/homepage1-3.png"
-            img4="/image/homepage/homepage1-4.png"
-            img5="/image/homepage/homepage1-5.png"
+            img1="../../image/homepage/homepage1-1.png"
+            img2="../../image/homepage/homepage1-2.png"
+            img3="../../image/homepage/homepage1-3.png"
+            img4="../../image/homepage/homepage1-4.png"
           />
         </div>
       </div>

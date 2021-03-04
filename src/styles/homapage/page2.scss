@@ -7,6 +7,8 @@
 
 .page2 {
   margin-bottom: 20vh;
+  font-family: $fontType1;
+
   .page2img1 {
     @extend %page2img;
     background-image: url(../../image/homepage/homepage2-1.png);
@@ -23,28 +25,23 @@
   }
   .page2desBlock {
     margin: 19.375rem 0 0 1.875rem;
-  }
-  .adopt {
-    font-size: 3.75rem;
-    font-weight: lighter;
-    font-family: $fontType3;
-    color: $primary;
-    margin-bottom: 45px;
-  }
-  .page2des {
-    color: #707070;
-    font-size: 20px;
-    font-family: $fontType1;
-    margin: 0 0 26px 107px;
-  }
-  .page2des2 {
-    color: $primary;
-    font-size: 1rem;
-    font-family: $fontType1;
-    margin-left: 15.9375rem;
-
-    &:hover {
+    .adopt {
       color: $primary;
+      margin-bottom: 2.8125rem;
+      font: {
+        size: 3.75rem;
+        weight: lighter;
+      }
+    }
+    .page2des {
+      color: #707070;
+      font-size: 1.25rem;
+      margin: 0 0 1.625rem 6.6875rem;
+    }
+    .page2des2 {
+      color: $primary;
+      font-size: 1rem;
+      margin-left: 15.9375rem;
     }
   }
 }

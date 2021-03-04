@@ -23,12 +23,8 @@ function Page2() {
               className="page2img3"
             />
             <div className="page2desBlock">
-              <div className="adopt">
-                <span>Adopt -</span>
-              </div>
-              <div className="page2des">
-                <span>遇見，命中注定的那個牠</span>
-              </div>
+              <div className="adopt">Adopt -</div>
+              <div className="page2des">遇見，命中注定的那個牠</div>
               <div>
                 <a href="##" className="hvr-icon-forward page2des2 a">
                   立刻前往

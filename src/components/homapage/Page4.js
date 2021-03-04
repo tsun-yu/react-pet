@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import Page4Card from './HP-component/Page4Card'
-import QueueAnim from 'rc-queue-anim'
+import React, { useState, useEffect } from "react";
+import Page4Card from "./HP-component/Page4Card";
+import QueueAnim from "rc-queue-anim";
 
 function Page4(props) {
   return (
@@ -14,7 +14,7 @@ function Page4(props) {
       <div className="container page4">
         <div className="row align-items-center">
           <Page4Card
-            img="./image/homepage/homepage4-1.png"
+            img="../../image/homepage/homepage4-1.png"
             label="狗 狗 用 品"
             cardClass="col-lg-3 page4product hvr-float-shadow"
             labelClass="page4label label1 "
@@ -22,7 +22,7 @@ function Page4(props) {
           />
 
           <Page4Card
-            img="./image/homepage/homepage4-2.png"
+            img="../../image/homepage/homepage4-2.png"
             label="貓 咪 用 品"
             cardClass="hvr-float-shadow col-lg-3 page4product mt-5"
             labelClass="page4label label2 "
@@ -30,7 +30,7 @@ function Page4(props) {
           />
 
           <Page4Card
-            img="./image/homepage/homepage4-3.png"
+            img="../../image/homepage/homepage4-3.png"
             label="寵 物 玩 具"
             cardClass="hvr-float-shadow col-lg-3 page4product"
             labelClass="page4label label1"
@@ -38,7 +38,7 @@ function Page4(props) {
           />
 
           <Page4Card
-            img="./image/homepage/homepage4-4.png"
+            img="../../image/homepage/homepage4-4.png"
             label="寵 物 飼 料"
             cardClass="hvr-float-shadow col-lg-3 page4product mt-5"
             labelClass="page4label label2"
@@ -47,7 +47,7 @@ function Page4(props) {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Page4
+export default Page4;

@@ -6,15 +6,14 @@
 .page4title {
   width: 25rem;
   height: 9rem;
-  margin: auto;
-  .page4Store {
+  div:nth-child(1) {
     color: $primary;
     margin-bottom: 10px;
     font-size: 3.75rem;
     font-family: $fontType3;
     font-weight: lighter;
   }
-  .page4slogan {
+  div:nth-child(2) {
     color: #555555;
     font-size: 1.25rem;
     font-family: $fontType1;

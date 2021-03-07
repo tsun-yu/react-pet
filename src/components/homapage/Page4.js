@@ -5,11 +5,9 @@ import QueueAnim from "rc-queue-anim";
 function Page4(props) {
   return (
     <>
-      <div className="page4title my-5">
-        <div className="page4Store">
-          <span>Store -</span>
-        </div>
-        <div className="page4slogan">您需要的一切, 我們都準備好了。</div>
+      <div className="page4title my-5 mx-auto">
+        <div>Store -</div>
+        <div>您需要的一切, 我們都準備好了。</div>
       </div>
       <div className="container page4">
         <div className="row align-items-center">

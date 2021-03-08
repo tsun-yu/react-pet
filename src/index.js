@@ -19,6 +19,7 @@ ReactDOM.render(
     <Provider store={store}>
       <App />
     </Provider>
+    {/* <App /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 // import Page3Topic from './Page3Topic'
 
 function Page3Ques3(props) {
-  const { city, area, setCity, switchColor } = props
-  area === '縣市' && setCity('請先選擇地區')
+  const { city, area, setCity, switchColor } = props;
+  area === "縣市" && setCity("請先選擇地區");
 
   return (
     <>
@@ -15,7 +15,7 @@ function Page3Ques3(props) {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Page3Ques3
+export default Page3Ques3;

@@ -1,12 +1,16 @@
-import React, { useState, useEffect } from 'react'
-import NorthernCity from './Ques3component/NorthernCity'
-import SouthernCity from './Ques3component/SouthernCity'
-import WesternCity from './Ques3component/WesternCity'
-import EasternCity from './Ques3component/EasternCity'
-import Page3Topic from './Page3Topic'
+import React from "react";
+import { connect } from "react-redux";
+import { setCity } from "../../../../actions";
+
+import NorthernCity from "./Ques3component/NorthernCity";
+import SouthernCity from "./Ques3component/SouthernCity";
+import WesternCity from "./Ques3component/WesternCity";
+import EasternCity from "./Ques3component/EasternCity";
+import Page3Topic from "./Page3Topic";
 
 function Page3Ques2(props) {
-  const { setCity, setArea, switchColor, setDot, selectToggle } = props
+  const { setCity, setArea, switchColor, setDot, selectToggle } = props;
+  // const { setCity, setArea, switchColor, setDot, selectToggle } = props;
   return (
     <>
       <div className="page3single ">
@@ -16,16 +20,11 @@ function Page3Ques2(props) {
             className="a mx-2"
             href="##"
             onClick={(e) => {
-              setCity(
-                <NorthernCity
-                  switchColor={switchColor}
-                  selectToggle={selectToggle}
-                />
-              )
-              setArea('北部地區')
-              document.querySelector('.page3').style.left = '-200vw'
-              setDot(3)
-              // switchColor(e.target)
+              props.setCity(<NorthernCity />);
+              setArea("北部地區");
+              document.querySelector(".page3").style.left = "-200vw";
+              setDot(3);
+              switchColor(e.target);
             }}
           >
             <div className="page3circle page3area">北部</div>
@@ -39,10 +38,10 @@ function Page3Ques2(props) {
                   switchColor={switchColor}
                   selectToggle={selectToggle}
                 />
-              )
-              setArea('中部地區')
-              document.querySelector('.page3').style.left = '-200vw'
-              setDot(3)
+              );
+              setArea("中部地區");
+              document.querySelector(".page3").style.left = "-200vw";
+              setDot(3);
               // switchColor(e.target)
             }}
           >
@@ -57,10 +56,10 @@ function Page3Ques2(props) {
                   switchColor={switchColor}
                   selectToggle={selectToggle}
                 />
-              )
-              setArea('南部地區')
-              document.querySelector('.page3').style.left = '-200vw'
-              setDot(3)
+              );
+              setArea("南部地區");
+              document.querySelector(".page3").style.left = "-200vw";
+              setDot(3);
               // switchColor(e.target)
             }}
           >
@@ -75,10 +74,10 @@ function Page3Ques2(props) {
                   switchColor={switchColor}
                   selectToggle={selectToggle}
                 />
-              )
-              setArea('東部地區')
-              document.querySelector('.page3').style.left = '-200vw'
-              setDot(3)
+              );
+              setArea("東部地區");
+              document.querySelector(".page3").style.left = "-200vw";
+              setDot(3);
               // switchColor(e.target)
             }}
           >
@@ -87,7 +86,16 @@ function Page3Ques2(props) {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Page3Ques2
+const mapStateToProps = (store) => {
+  return { city: store.city };
+};
+export default connect(
+  mapStateToProps, // mapDispatchToProps,
+  //actionCreators
+  { setCity }
+)(Page3Ques2);
+
+// export default Page3Ques2

@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
+import { setDot } from "../../actions/";
+
 import Page3Ques1 from "./HP-component/Page3component/Page3Ques1";
 import Page3Ques2 from "./HP-component/Page3component/Page3Ques2";
 import Page3Ques3 from "./HP-component/Page3component/Page3Ques3";
@@ -10,9 +13,9 @@ import DogSize from "./HP-component/Page3component/Ques6component/DogSize";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 function Page3(props) {
-  const [dot, setDot] = useState(1);
-  const [city, setCity] = useState("");
-  const [area, setArea] = useState("縣市");
+  const { setDot, dot } = props;
+  const [pet, setPet] = useState(<DogSize />);
+  // const [pet, setPet] = useState(<DogSize selectToggle={selectToggle} />);
 
   const [select, setSelect] = useState([
     0,
@@ -126,7 +129,6 @@ function Page3(props) {
     console.log(select);
   };
 
-  const [pet, setPet] = useState(<DogSize selectToggle={selectToggle} />);
   //connect DB
   const postDB = async (select) => {
     const url = "http://localhost:3001/straymao/homepage/question";
@@ -201,20 +203,10 @@ function Page3(props) {
           </a>
           {/* content */}
           <div className="d-flex page3 position-absolute" style={{ left: 0 }}>
-            <Page3Ques1
-              setPet={setPet}
-              setDot={setDot}
-              selectToggle={selectToggle}
-            />
-            <Page3Ques2
-              setCity={setCity}
-              setArea={setArea}
-              switchColor={switchColor}
-              setDot={setDot}
-              selectToggle={selectToggle}
-            />
-            <Page3Ques3 city={city} area={area} setCity={setCity} />
-            <Page3Ques4 setDot={setDot} selectToggle={selectToggle} />
+            <Page3Ques1 setPet={setPet} selectToggle={selectToggle} />
+            <Page3Ques2 switchColor={switchColor} selectToggle={selectToggle} />
+            <Page3Ques3 />
+            <Page3Ques4 selectToggle={selectToggle} />
             <Page3Ques5 switchColor={switchColor} selectToggle={selectToggle} />
             <Page3Ques6 pet={pet} selectToggle={selectToggle} select={select} />
           </div>
@@ -276,5 +268,14 @@ function Page3(props) {
     </>
   );
 }
+const mapStateToProps = (store) => {
+  return { dot: store.dot };
+};
 
-export default Page3;
+export default connect(
+  mapStateToProps, // mapDispatchToProps,
+  //actionCreators
+  { setDot }
+)(Page3);
+
+// export default Page3;

@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { setCity } from "../../../../actions";
+import { setArea, setCity, setDot } from "../../../../actions";
 
 import NorthernCity from "./Ques3component/NorthernCity";
 import SouthernCity from "./Ques3component/SouthernCity";
@@ -10,7 +10,7 @@ import Page3Topic from "./Page3Topic";
 
 function Page3Ques2(props) {
   const { setCity, setArea, switchColor, setDot, selectToggle } = props;
-  // const { setCity, setArea, switchColor, setDot, selectToggle } = props;
+
   return (
     <>
       <div className="page3single ">
@@ -20,7 +20,7 @@ function Page3Ques2(props) {
             className="a mx-2"
             href="##"
             onClick={(e) => {
-              props.setCity(<NorthernCity />);
+              setCity(<NorthernCity />);
               setArea("北部地區");
               document.querySelector(".page3").style.left = "-200vw";
               setDot(3);
@@ -42,7 +42,7 @@ function Page3Ques2(props) {
               setArea("中部地區");
               document.querySelector(".page3").style.left = "-200vw";
               setDot(3);
-              // switchColor(e.target)
+              switchColor(e.target);
             }}
           >
             <div className="page3circle page3area">中部</div>
@@ -60,7 +60,7 @@ function Page3Ques2(props) {
               setArea("南部地區");
               document.querySelector(".page3").style.left = "-200vw";
               setDot(3);
-              // switchColor(e.target)
+              switchColor(e.target);
             }}
           >
             <div className="page3circle page3area">南部</div>
@@ -78,7 +78,7 @@ function Page3Ques2(props) {
               setArea("東部地區");
               document.querySelector(".page3").style.left = "-200vw";
               setDot(3);
-              // switchColor(e.target)
+              switchColor(e.target);
             }}
           >
             <div className="page3circle page3area">東部</div>
@@ -90,12 +90,10 @@ function Page3Ques2(props) {
 }
 
 const mapStateToProps = (store) => {
-  return { city: store.city };
+  return { city: store.city, area: store.area };
 };
 export default connect(
   mapStateToProps, // mapDispatchToProps,
   //actionCreators
-  { setCity }
+  { setCity, setArea, setDot }
 )(Page3Ques2);
-
-// export default Page3Ques2

@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from "react";
+import { switchColor } from "../../../../../functions/index";
 
 function EasternCity(props) {
-  const { switchColor, selectToggle } = props
+  const { selectToggle } = props;
   return (
     <>
       <div className="d-flex justify-content-center">
@@ -9,8 +10,8 @@ function EasternCity(props) {
           <div
             className="page3circle page3area"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(18)
+              switchColor(e.target);
+              selectToggle(18);
             }}
           >
             花蓮
@@ -20,8 +21,8 @@ function EasternCity(props) {
           <div
             className="page3circle page3area"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(19)
+              switchColor(e.target);
+              selectToggle(19);
             }}
           >
             臺東
@@ -29,7 +30,7 @@ function EasternCity(props) {
         </a>
       </div>
     </>
-  )
+  );
 }
 
-export default EasternCity
+export default EasternCity;

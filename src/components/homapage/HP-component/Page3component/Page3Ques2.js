@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { setArea, setCity, setDot } from "../../../../actions";
+import { switchColor } from "../../../../functions";
 
 import NorthernCity from "./Ques3component/NorthernCity";
 import SouthernCity from "./Ques3component/SouthernCity";
@@ -9,7 +10,7 @@ import EasternCity from "./Ques3component/EasternCity";
 import Page3Topic from "./Page3Topic";
 
 function Page3Ques2(props) {
-  const { setCity, setArea, switchColor, setDot, selectToggle } = props;
+  const { setCity, setArea, setDot, selectToggle } = props;
 
   return (
     <>
@@ -20,7 +21,7 @@ function Page3Ques2(props) {
             className="a mx-2"
             href="##"
             onClick={(e) => {
-              setCity(<NorthernCity />);
+              setCity(<NorthernCity selectToggle={selectToggle} />);
               setArea("北部地區");
               document.querySelector(".page3").style.left = "-200vw";
               setDot(3);
@@ -33,12 +34,7 @@ function Page3Ques2(props) {
             className="a mx-2"
             href="##"
             onClick={(e) => {
-              setCity(
-                <WesternCity
-                  switchColor={switchColor}
-                  selectToggle={selectToggle}
-                />
-              );
+              setCity(<WesternCity selectToggle={selectToggle} />);
               setArea("中部地區");
               document.querySelector(".page3").style.left = "-200vw";
               setDot(3);
@@ -51,12 +47,7 @@ function Page3Ques2(props) {
             className="a mx-2"
             href="##"
             onClick={(e) => {
-              setCity(
-                <SouthernCity
-                  switchColor={switchColor}
-                  selectToggle={selectToggle}
-                />
-              );
+              setCity(<SouthernCity selectToggle={selectToggle} />);
               setArea("南部地區");
               document.querySelector(".page3").style.left = "-200vw";
               setDot(3);
@@ -69,12 +60,7 @@ function Page3Ques2(props) {
             className="a mx-2"
             href="##"
             onClick={(e) => {
-              setCity(
-                <EasternCity
-                  switchColor={switchColor}
-                  selectToggle={selectToggle}
-                />
-              );
+              setCity(<EasternCity selectToggle={selectToggle} />);
               setArea("東部地區");
               document.querySelector(".page3").style.left = "-200vw";
               setDot(3);

@@ -1,4 +1,4 @@
 import { combineReducers } from "redux";
-import { city, area, dot } from "./page3";
+import { city, area, dot, pet } from "./page3";
 
-export const rootReducer = combineReducers({ city, area, dot });
+export const rootReducer = combineReducers({ city, area, dot, pet });

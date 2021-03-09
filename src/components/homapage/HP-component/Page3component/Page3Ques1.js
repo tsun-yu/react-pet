@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import Page3Topic from "./Page3Topic";
 import DogSize from "./Ques6component/DogSize";
 import CatSize from "./Ques6component/CatSize";
-import { setDot } from "../../../../actions";
+import { setDot, setPet } from "../../../../actions";
 
 function Page3Ques1(props) {
   const { setPet, setDot, selectToggle } = props;
@@ -119,10 +119,10 @@ function Page3Ques1(props) {
 }
 
 const mapStateToProps = (store) => {
-  return { dot: store.dot };
+  return { dot: store.dot, pet: store.pet };
 };
 export default connect(
   mapStateToProps, // mapDispatchToProps,
   //actionCreators
-  { setDot }
+  { setDot, setPet }
 )(Page3Ques1);

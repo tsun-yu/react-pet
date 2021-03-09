@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from "react";
+import { switchColor } from "../../../../../functions/index";
 
 function NorthernCity(props) {
-  const { switchColor, selectToggle } = props
+  const { selectToggle } = props;
   return (
     <>
       <div className="d-flex justify-content-center mb-2">
@@ -9,8 +10,8 @@ function NorthernCity(props) {
           <div
             className="page3circle2 page3city "
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(2)
+              switchColor(e.target);
+              selectToggle(2);
             }}
           >
             台北
@@ -20,8 +21,8 @@ function NorthernCity(props) {
           <div
             className="page3circle2 page3city"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(3)
+              switchColor(e.target);
+              selectToggle(3);
             }}
           >
             新北
@@ -31,8 +32,8 @@ function NorthernCity(props) {
           <div
             className="page3circle2 page3city"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(4)
+              switchColor(e.target);
+              selectToggle(4);
             }}
           >
             桃園
@@ -44,8 +45,8 @@ function NorthernCity(props) {
           <div
             className="page3circle2 page3city"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(5)
+              switchColor(e.target);
+              selectToggle(5);
             }}
           >
             新竹
@@ -55,8 +56,8 @@ function NorthernCity(props) {
           <div
             className="page3circle2 page3city"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(6)
+              switchColor(e.target);
+              selectToggle(6);
             }}
           >
             基隆
@@ -66,8 +67,8 @@ function NorthernCity(props) {
           <div
             className="page3circle2 page3city"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(7)
+              switchColor(e.target);
+              selectToggle(7);
             }}
           >
             宜蘭
@@ -75,7 +76,7 @@ function NorthernCity(props) {
         </a>
       </div>
     </>
-  )
+  );
 }
 
-export default NorthernCity
+export default NorthernCity;

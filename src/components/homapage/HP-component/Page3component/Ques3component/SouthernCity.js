@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from "react";
+import { switchColor } from "../../../../../functions/index";
 
 function SouthernCity(props) {
-  const { switchColor, selectToggle } = props
+  const { selectToggle } = props;
   return (
     <>
       <div className="d-flex justify-content-center mb-2">
@@ -9,8 +10,8 @@ function SouthernCity(props) {
           <div
             className="page3circle2 page3city"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(13)
+              switchColor(e.target);
+              selectToggle(13);
             }}
           >
             嘉義
@@ -20,8 +21,8 @@ function SouthernCity(props) {
           <div
             className="page3circle2 page3city"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(14)
+              switchColor(e.target);
+              selectToggle(14);
             }}
           >
             台南
@@ -31,8 +32,8 @@ function SouthernCity(props) {
           <div
             className="page3circle2 page3city"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(15)
+              switchColor(e.target);
+              selectToggle(15);
             }}
           >
             高雄
@@ -44,8 +45,8 @@ function SouthernCity(props) {
           <div
             className="page3circle2 page3city"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(16)
+              switchColor(e.target);
+              selectToggle(16);
             }}
           >
             屏東
@@ -55,8 +56,8 @@ function SouthernCity(props) {
           <div
             className="page3circle2 page3city"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(17)
+              switchColor(e.target);
+              selectToggle(17);
             }}
           >
             澎湖
@@ -64,7 +65,7 @@ function SouthernCity(props) {
         </a>
       </div>
     </>
-  )
+  );
 }
 
-export default SouthernCity
+export default SouthernCity;

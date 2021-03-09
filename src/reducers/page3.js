@@ -1,4 +1,4 @@
-import { SET_AREA, SET_CITY, SET_DOT } from "../actions/actionTypes";
+import { SET_AREA, SET_CITY, SET_DOT, SET_PET } from "../actions/actionTypes";
 
 function city(state = "請先選擇地區", action) {
   switch (action.type) {
@@ -28,4 +28,14 @@ function dot(state = 1, action) {
   }
 }
 
-export { city, area, dot };
+function pet(state = "", action) {
+  switch (action.type) {
+    case SET_PET: {
+      return action.payload.pet;
+    }
+    default:
+      return state;
+  }
+}
+
+export { city, area, dot, pet };

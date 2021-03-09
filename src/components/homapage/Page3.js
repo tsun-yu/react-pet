@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { setDot } from "../../actions/";
-
 import Page3Ques1 from "./HP-component/Page3component/Page3Ques1";
 import Page3Ques2 from "./HP-component/Page3component/Page3Ques2";
 import Page3Ques3 from "./HP-component/Page3component/Page3Ques3";
@@ -14,8 +13,6 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 function Page3(props) {
   const { setDot, dot } = props;
-  const [pet, setPet] = useState(<DogSize />);
-  // const [pet, setPet] = useState(<DogSize selectToggle={selectToggle} />);
 
   const [select, setSelect] = useState([
     0,
@@ -49,14 +46,6 @@ function Page3(props) {
     0,
   ]);
 
-  const switchColor = (x) => {
-    x.style.color === "rgb(203, 153, 126)"
-      ? (x.style.color = "#fff1e6")
-      : (x.style.color = "#cb997e");
-    x.style.border === "0.125rem solid rgb(203, 153, 126)"
-      ? (x.style.border = "#fff1e6 solid 0.125rem")
-      : (x.style.border = "#cb997e solid 0.125rem");
-  };
   const backpage = () => {
     switch (dot) {
       case 2:
@@ -203,12 +192,12 @@ function Page3(props) {
           </a>
           {/* content */}
           <div className="d-flex page3 position-absolute" style={{ left: 0 }}>
-            <Page3Ques1 setPet={setPet} selectToggle={selectToggle} />
-            <Page3Ques2 switchColor={switchColor} selectToggle={selectToggle} />
+            <Page3Ques1 selectToggle={selectToggle} />
+            <Page3Ques2 selectToggle={selectToggle} />
             <Page3Ques3 />
             <Page3Ques4 selectToggle={selectToggle} />
-            <Page3Ques5 switchColor={switchColor} selectToggle={selectToggle} />
-            <Page3Ques6 pet={pet} selectToggle={selectToggle} select={select} />
+            <Page3Ques5 selectToggle={selectToggle} />
+            <Page3Ques6 selectToggle={selectToggle} select={select} />
           </div>
           {/* dots */}
           <ul className="list-unstyled slider-dots position-absolute d-flex justify-content-center w-100">

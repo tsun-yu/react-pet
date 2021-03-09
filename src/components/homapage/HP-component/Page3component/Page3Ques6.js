@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Page3Topic from "./Page3Topic";
 import { withRouter, useHistory } from "react-router-dom";
 import { connect } from "react-redux";
@@ -57,9 +57,14 @@ function Page3Ques6(props) {
     </>
   );
 }
-const mapStateToProps = (store) => {
-  return {};
-};
-const mapDispatchToProps = null;
 
-export default withRouter(Page3Ques6);
+const mapStateToProps = (store) => {
+  return { pet: store.pet };
+};
+export default withRouter(
+  connect(
+    mapStateToProps, // mapDispatchToProps,
+    //actionCreators
+    {}
+  )(Page3Ques6)
+);

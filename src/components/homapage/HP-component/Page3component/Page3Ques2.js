@@ -1,12 +1,17 @@
-import React, { useState, useEffect } from 'react'
-import NorthernCity from './Ques3component/NorthernCity'
-import SouthernCity from './Ques3component/SouthernCity'
-import WesternCity from './Ques3component/WesternCity'
-import EasternCity from './Ques3component/EasternCity'
-import Page3Topic from './Page3Topic'
+import React from "react";
+import { connect } from "react-redux";
+import { setArea, setCity, setDot } from "../../../../actions";
+import { switchColor } from "../../../../functions";
+
+import NorthernCity from "./Ques3component/NorthernCity";
+import SouthernCity from "./Ques3component/SouthernCity";
+import WesternCity from "./Ques3component/WesternCity";
+import EasternCity from "./Ques3component/EasternCity";
+import Page3Topic from "./Page3Topic";
 
 function Page3Ques2(props) {
-  const { setCity, setArea, switchColor, setDot, selectToggle } = props
+  const { setCity, setArea, setDot, selectToggle } = props;
+
   return (
     <>
       <div className="page3single ">
@@ -16,16 +21,11 @@ function Page3Ques2(props) {
             className="a mx-2"
             href="##"
             onClick={(e) => {
-              setCity(
-                <NorthernCity
-                  switchColor={switchColor}
-                  selectToggle={selectToggle}
-                />
-              )
-              setArea('北部地區')
-              document.querySelector('.page3').style.left = '-200vw'
-              setDot(3)
-              // switchColor(e.target)
+              setCity(<NorthernCity selectToggle={selectToggle} />);
+              setArea("北部地區");
+              document.querySelector(".page3").style.left = "-200vw";
+              setDot(3);
+              switchColor(e.target);
             }}
           >
             <div className="page3circle page3area">北部</div>
@@ -34,16 +34,11 @@ function Page3Ques2(props) {
             className="a mx-2"
             href="##"
             onClick={(e) => {
-              setCity(
-                <WesternCity
-                  switchColor={switchColor}
-                  selectToggle={selectToggle}
-                />
-              )
-              setArea('中部地區')
-              document.querySelector('.page3').style.left = '-200vw'
-              setDot(3)
-              // switchColor(e.target)
+              setCity(<WesternCity selectToggle={selectToggle} />);
+              setArea("中部地區");
+              document.querySelector(".page3").style.left = "-200vw";
+              setDot(3);
+              switchColor(e.target);
             }}
           >
             <div className="page3circle page3area">中部</div>
@@ -52,16 +47,11 @@ function Page3Ques2(props) {
             className="a mx-2"
             href="##"
             onClick={(e) => {
-              setCity(
-                <SouthernCity
-                  switchColor={switchColor}
-                  selectToggle={selectToggle}
-                />
-              )
-              setArea('南部地區')
-              document.querySelector('.page3').style.left = '-200vw'
-              setDot(3)
-              // switchColor(e.target)
+              setCity(<SouthernCity selectToggle={selectToggle} />);
+              setArea("南部地區");
+              document.querySelector(".page3").style.left = "-200vw";
+              setDot(3);
+              switchColor(e.target);
             }}
           >
             <div className="page3circle page3area">南部</div>
@@ -70,16 +60,11 @@ function Page3Ques2(props) {
             className="a mx-2"
             href="##"
             onClick={(e) => {
-              setCity(
-                <EasternCity
-                  switchColor={switchColor}
-                  selectToggle={selectToggle}
-                />
-              )
-              setArea('東部地區')
-              document.querySelector('.page3').style.left = '-200vw'
-              setDot(3)
-              // switchColor(e.target)
+              setCity(<EasternCity selectToggle={selectToggle} />);
+              setArea("東部地區");
+              document.querySelector(".page3").style.left = "-200vw";
+              setDot(3);
+              switchColor(e.target);
             }}
           >
             <div className="page3circle page3area">東部</div>
@@ -87,7 +72,14 @@ function Page3Ques2(props) {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Page3Ques2
+const mapStateToProps = (store) => {
+  return { city: store.city, area: store.area };
+};
+export default connect(
+  mapStateToProps, // mapDispatchToProps,
+  //actionCreators
+  { setCity, setArea, setDot }
+)(Page3Ques2);

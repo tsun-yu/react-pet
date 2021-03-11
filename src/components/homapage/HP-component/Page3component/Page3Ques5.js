@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import Page3Topic from './Page3Topic'
+import React from "react";
+import Page3Topic from "./Page3Topic";
+import { switchColor } from "../../../../functions";
 
 function Page3Ques5(props) {
-  const { switchColor, selectToggle } = props
+  const { selectToggle } = props;
   return (
     <>
       <div className="page3single ">
@@ -12,8 +13,8 @@ function Page3Ques5(props) {
             className="a mx-2"
             href="##"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(22)
+              switchColor(e.target);
+              selectToggle(22);
             }}
           >
             <div className="page3circle page3area">黑</div>
@@ -22,8 +23,8 @@ function Page3Ques5(props) {
             className="a mx-2"
             href="##"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(23)
+              switchColor(e.target);
+              selectToggle(23);
             }}
           >
             <div className="page3circle page3area">白</div>
@@ -32,8 +33,8 @@ function Page3Ques5(props) {
             className="a mx-2"
             href="##"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(24)
+              switchColor(e.target);
+              selectToggle(24);
             }}
           >
             <div className="page3circle page3area">灰</div>
@@ -42,8 +43,8 @@ function Page3Ques5(props) {
             className="a mx-2"
             href="##"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(25)
+              switchColor(e.target);
+              selectToggle(25);
             }}
           >
             <div className="page3circle page3area">黃</div>
@@ -51,7 +52,7 @@ function Page3Ques5(props) {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Page3Ques5
+export default Page3Ques5;

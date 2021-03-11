@@ -1,57 +1,59 @@
-import React, { useState, useEffect } from 'react'
-import Page3Topic from './Page3Topic'
-import DogSize from './Ques6component/DogSize'
-import CatSize from './Ques6component/CatSize'
+import React from "react";
+import { connect } from "react-redux";
+import Page3Topic from "./Page3Topic";
+import DogSize from "./Ques6component/DogSize";
+import CatSize from "./Ques6component/CatSize";
+import { setDot, setPet } from "../../../../actions";
 
 function Page3Ques1(props) {
-  const { setPet, setDot, selectToggle } = props
+  const { setPet, setDot, selectToggle } = props;
 
   const dogColorToggle = () => {
     const catSvg = document.querySelector(
-      '#root > main > div > div:nth-child(5) > div > div > div:nth-child(1) > div.d-flex.justify-content-center > a.ml-5'
-    ).classList
+      "#root > main > div > div:nth-child(5) > div > div > div:nth-child(1) > div.d-flex.justify-content-center > a.ml-5"
+    ).classList;
     const dogSvg = document.querySelector(
-      '#root > main > div > div:nth-child(5) > div > div > div:nth-child(1) > div.d-flex.justify-content-center > a.mr-5'
-    ).classList
-    if (dogSvg[2] == 'page3pet') {
-      dogSvg.remove('page3circle')
-      dogSvg.remove('page3pet')
-      catSvg.remove('page3circleClick')
-      catSvg.remove('page3petClick')
-      dogSvg.add('page3circleClick')
-      dogSvg.add('page3petClick')
-      catSvg.add('page3circle')
-      catSvg.add('page3pet')
+      "#root > main > div > div:nth-child(5) > div > div > div:nth-child(1) > div.d-flex.justify-content-center > a.mr-5"
+    ).classList;
+    if (dogSvg[2] == "page3pet") {
+      dogSvg.remove("page3circle");
+      dogSvg.remove("page3pet");
+      catSvg.remove("page3circleClick");
+      catSvg.remove("page3petClick");
+      dogSvg.add("page3circleClick");
+      dogSvg.add("page3petClick");
+      catSvg.add("page3circle");
+      catSvg.add("page3pet");
     } else {
-      dogSvg.remove('page3circleClick')
-      dogSvg.remove('page3petClick')
-      dogSvg.add('page3circle')
-      dogSvg.add('page3pet')
+      dogSvg.remove("page3circleClick");
+      dogSvg.remove("page3petClick");
+      dogSvg.add("page3circle");
+      dogSvg.add("page3pet");
     }
-  }
+  };
   const catColorToggle = () => {
     const catSvg = document.querySelector(
-      '#root > main > div > div:nth-child(5) > div > div > div:nth-child(1) > div.d-flex.justify-content-center > a.ml-5'
-    ).classList
+      "#root > main > div > div:nth-child(5) > div > div > div:nth-child(1) > div.d-flex.justify-content-center > a.ml-5"
+    ).classList;
     const dogSvg = document.querySelector(
-      '#root > main > div > div:nth-child(5) > div > div > div:nth-child(1) > div.d-flex.justify-content-center > a.mr-5'
-    ).classList
-    if (catSvg[2] == 'page3pet') {
-      dogSvg.remove('page3circleClick')
-      dogSvg.remove('page3petClick')
-      catSvg.remove('page3circle')
-      catSvg.remove('page3pet')
-      dogSvg.add('page3circle')
-      dogSvg.add('page3pet')
-      catSvg.add('page3circleClick')
-      catSvg.add('page3petClick')
+      "#root > main > div > div:nth-child(5) > div > div > div:nth-child(1) > div.d-flex.justify-content-center > a.mr-5"
+    ).classList;
+    if (catSvg[2] == "page3pet") {
+      dogSvg.remove("page3circleClick");
+      dogSvg.remove("page3petClick");
+      catSvg.remove("page3circle");
+      catSvg.remove("page3pet");
+      dogSvg.add("page3circle");
+      dogSvg.add("page3pet");
+      catSvg.add("page3circleClick");
+      catSvg.add("page3petClick");
     } else {
-      catSvg.remove('page3circleClick')
-      catSvg.remove('page3petClick')
-      catSvg.add('page3circle')
-      catSvg.add('page3pet')
+      catSvg.remove("page3circleClick");
+      catSvg.remove("page3petClick");
+      catSvg.add("page3circle");
+      catSvg.add("page3pet");
     }
-  }
+  };
 
   return (
     <>
@@ -62,12 +64,12 @@ function Page3Ques1(props) {
           <a
             href="##"
             onClick={() => {
-              document.querySelector('.page3').style.left = '-100vw'
-              setPet(<DogSize selectToggle={selectToggle} />)
-              setDot(2)
-              selectToggle(0)
-              dogColorToggle()
-              document.querySelector('.back').style.visibility = 'visible'
+              document.querySelector(".page3").style.left = "-100vw";
+              setPet(<DogSize selectToggle={selectToggle} />);
+              setDot(2);
+              selectToggle(0);
+              dogColorToggle();
+              document.querySelector(".back").style.visibility = "visible";
             }}
             className="page3circle mr-5 page3pet"
           >
@@ -88,12 +90,12 @@ function Page3Ques1(props) {
           <a
             href="##"
             onClick={() => {
-              document.querySelector('.page3').style.left = '-100vw'
-              setPet(<CatSize selectToggle={selectToggle} />)
-              setDot(2)
-              selectToggle(1)
-              document.querySelector('.back').style.visibility = 'visible'
-              catColorToggle()
+              document.querySelector(".page3").style.left = "-100vw";
+              setPet(<CatSize selectToggle={selectToggle} />);
+              setDot(2);
+              selectToggle(1);
+              document.querySelector(".back").style.visibility = "visible";
+              catColorToggle();
             }}
             className=" page3circle ml-5 page3pet"
           >
@@ -113,7 +115,14 @@ function Page3Ques1(props) {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Page3Ques1
+const mapStateToProps = (store) => {
+  return { dot: store.dot, pet: store.pet };
+};
+export default connect(
+  mapStateToProps, // mapDispatchToProps,
+  //actionCreators
+  { setDot, setPet }
+)(Page3Ques1);

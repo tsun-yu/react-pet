@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react'
-// import Page3Topic from './Page3Topic'
+import React from "react";
+import { connect } from "react-redux";
 
 function Page3Ques3(props) {
-  const { city, area, setCity, switchColor } = props
-  area === '縣市' && setCity('請先選擇地區')
+  const { city, area } = props;
 
   return (
     <>
@@ -15,7 +14,12 @@ function Page3Ques3(props) {
         </div>
       </div>
     </>
-  )
+  );
 }
-
-export default Page3Ques3
+const mapStateToProps = (store) => {
+  return { city: store.city, area: store.area };
+};
+export default connect(
+  mapStateToProps // mapDispatchToProps,
+  //actionCreators
+)(Page3Ques3);

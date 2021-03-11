@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from "react";
+import { switchColor } from "../../../../../functions/index";
 
 function WesternCity(props) {
-  const { switchColor, selectToggle } = props
+  const { selectToggle } = props;
   return (
     <>
       <div className="d-flex justify-content-center mb-2">
@@ -9,8 +10,8 @@ function WesternCity(props) {
           <div
             className="page3circle2 page3city"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(8)
+              switchColor(e.target);
+              selectToggle(8);
             }}
           >
             苗栗
@@ -20,8 +21,8 @@ function WesternCity(props) {
           <div
             className="page3circle2 page3city"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(9)
+              switchColor(e.target);
+              selectToggle(9);
             }}
           >
             臺中
@@ -31,8 +32,8 @@ function WesternCity(props) {
           <div
             className="page3circle2 page3city"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(10)
+              switchColor(e.target);
+              selectToggle(10);
             }}
           >
             彰化
@@ -44,8 +45,8 @@ function WesternCity(props) {
           <div
             className="page3circle2 page3city"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(11)
+              switchColor(e.target);
+              selectToggle(11);
             }}
           >
             南投
@@ -55,8 +56,8 @@ function WesternCity(props) {
           <div
             className="page3circle2 page3city"
             onClick={(e) => {
-              switchColor(e.target)
-              selectToggle(12)
+              switchColor(e.target);
+              selectToggle(12);
             }}
           >
             雲林
@@ -64,7 +65,7 @@ function WesternCity(props) {
         </a>
       </div>
     </>
-  )
+  );
 }
 
-export default WesternCity
+export default WesternCity;

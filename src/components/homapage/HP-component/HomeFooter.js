@@ -190,10 +190,12 @@ function HomeFooter() {
           <div className="position-absolute straymao2020 d-block">
             STRAYMAO©2020
           </div>
-          <a
-            href="##"
+          <div
             onClick={() => {
-              document.documentElement.scrollTop = 0;
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
             }}
           >
             <svg
@@ -226,7 +228,7 @@ function HomeFooter() {
                 strokeWidth="1"
               />
             </svg>
-          </a>
+          </div>
         </div>
       </footer>
     </>

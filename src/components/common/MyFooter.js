@@ -11,7 +11,7 @@ import FooterImgs from "./footerItem/FooterImgs";
 function MyFooter() {
   return (
     <>
-      <footer className="footer navbar-fixed-bottom footer_bg">
+      <footer className="footer mt-auto footer_bg">
         <br />
         <div className="row container-fluid footer_content">
           <div className="row col-5 justify-content-start">

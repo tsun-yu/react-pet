@@ -7,6 +7,7 @@ import MainContent from "./components/common/MainContent";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Donate from "./components/homapage/Donate";
 import Homepage from "./components/homapage/Homepage";
+import NotFound from "./components/common/NotFound";
 
 function App() {
   const [navbar, setNavbar] = useState(<MyNavbar />);
@@ -29,15 +30,14 @@ function App() {
         {navbar}
         <MainContent>
           <Switch>
-            {/* 注意：要加上網址參數 */}
-
             <Route path="/" exact>
-              {/*要連線的網頁*/}
               <Homepage setHome={setHome} />
             </Route>
             <Route path="/donate">
-              {/*要連線的網頁*/}
               <Donate />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </MainContent>

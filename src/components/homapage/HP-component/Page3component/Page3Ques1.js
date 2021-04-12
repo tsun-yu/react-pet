@@ -38,6 +38,7 @@ function Page3Ques1(props) {
     const dogSvg = document.querySelector(
       "#root > main > div > div:nth-child(5) > div > div > div:nth-child(1) > div.d-flex.justify-content-center > a.mr-5"
     ).classList;
+
     if (catSvg[2] == "page3pet") {
       dogSvg.remove("page3circleClick");
       dogSvg.remove("page3petClick");

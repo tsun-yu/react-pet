@@ -33,7 +33,6 @@ function Page3Ques6(props) {
         {pet}
       </div>
       <a
-        href="##"
         onClick={() => {
           props.history.push("/adoptionmain");
         }}

@@ -18,7 +18,7 @@ function Page3Ques2(props) {
         <Page3Topic title="選擇地區" />
         <div className="d-flex justify-content-center">
           <a
-            className="a mx-2"
+            className="mx-2"
             href="##"
             onClick={(e) => {
               setCity(<NorthernCity selectToggle={selectToggle} />);
@@ -31,7 +31,7 @@ function Page3Ques2(props) {
             <div className="page3circle page3area">北部</div>
           </a>
           <a
-            className="a mx-2"
+            className="mx-2"
             href="##"
             onClick={(e) => {
               setCity(<WesternCity selectToggle={selectToggle} />);
@@ -44,7 +44,7 @@ function Page3Ques2(props) {
             <div className="page3circle page3area">中部</div>
           </a>
           <a
-            className="a mx-2"
+            className="mx-2"
             href="##"
             onClick={(e) => {
               setCity(<SouthernCity selectToggle={selectToggle} />);
@@ -57,7 +57,7 @@ function Page3Ques2(props) {
             <div className="page3circle page3area">南部</div>
           </a>
           <a
-            className="a mx-2"
+            className="mx-2"
             href="##"
             onClick={(e) => {
               setCity(<EasternCity selectToggle={selectToggle} />);

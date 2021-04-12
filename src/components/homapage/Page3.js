@@ -7,7 +7,6 @@ import Page3Ques3 from "./HP-component/Page3component/Page3Ques3";
 import Page3Ques4 from "./HP-component/Page3component/Page3Ques4";
 import Page3Ques5 from "./HP-component/Page3component/Page3Ques5";
 import Page3Ques6 from "./HP-component/Page3component/Page3Ques6";
-import DogSize from "./HP-component/Page3component/Ques6component/DogSize";
 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
@@ -133,7 +132,6 @@ function Page3(props) {
     try {
       const response = await fetch(request);
       // const data = await response.json()
-      // data會是一個物件值
       // await console.log(data)
     } catch (error) {
       //setError(error)

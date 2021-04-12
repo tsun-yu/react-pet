@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import { Parallax } from 'rc-scroll-anim'
+import React, { useState, useEffect } from "react";
+import { Parallax } from "rc-scroll-anim";
 
 function HomeFooter() {
   const scroll2Top = () => {
-    document.documentElement.scrollTop = 0
-  }
-  useEffect(() => {})
+    document.documentElement.scrollTop = 0;
+  };
+  useEffect(() => {});
   return (
     <>
       <footer className="navbar-fixed-bottom homeFt_bg ">
@@ -20,8 +20,8 @@ function HomeFooter() {
             </div>
           </div>
           <Parallax
-            animation={{ x: '330%', opacity: 1, playScale: [0, 1] }}
-            style={{ transform: 'translateX(-0)', opacity: 1 }}
+            animation={{ x: "200%", opacity: 1, playScale: [0, 1] }}
+            style={{ transform: "translateX(-0)", opacity: 1 }}
             className="homeFtTruck position-absolute"
           />
           <div className="homeFtTree position-absolute"></div>
@@ -193,7 +193,7 @@ function HomeFooter() {
           <a
             href="##"
             onClick={() => {
-              document.documentElement.scrollTop = 0
+              document.documentElement.scrollTop = 0;
             }}
           >
             <svg
@@ -230,7 +230,7 @@ function HomeFooter() {
         </div>
       </footer>
     </>
-  )
+  );
 }
 
-export default HomeFooter
+export default HomeFooter;

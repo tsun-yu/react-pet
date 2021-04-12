@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import { GrCart } from "react-icons/gr";
-
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 
 function MyNavbar(props) {
   return (
@@ -15,7 +13,11 @@ function MyNavbar(props) {
         display="flex"
         className="commonNavbar"
       >
-        <Navbar.Brand href="/" className="ml-5 d-flex position-relative">
+        <Navbar.Brand
+          className="ml-5 d-flex position-relative"
+          onClick={() => props.history.push("/")}
+          style={{ cursor: "pointer" }}
+        >
           <div
             style={{
               color: "#FFF1E6",
@@ -25,7 +27,6 @@ function MyNavbar(props) {
           >
             Stray Mao
           </div>
-
           <div
             className="navLogoCN position-absolute"
             style={{ color: "#FFF1E6", fontSize: "16px", display: "inline" }}
@@ -199,4 +200,4 @@ function MyNavbar(props) {
   );
 }
 
-export default MyNavbar;
+export default withRouter(MyNavbar);

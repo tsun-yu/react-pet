@@ -1,3 +1,4 @@
+@import "./page3/page3Q5.scss";
 @import "./page3/page3Q6.scss";
 
 .page3bg {
@@ -39,9 +40,10 @@
         justify-content: center;
         align-items: center;
         transition: 0.5s;
+        cursor: pointer;
 
         &:hover {
-          border: #cb997e solid 0.125rem;
+          border: $secondary solid 0.125rem;
         }
         svg {
           fill: #fff1e6;
@@ -63,17 +65,6 @@
         justify-content: center;
         align-items: center;
         transition: 0.5s;
-      }
-      .page3area {
-        font-size: 3.75rem;
-        font-family: $fontType2;
-        color: #fff1e6;
-
-        &:hover {
-          color: #cb997e;
-          font-size: 4rem;
-          transition: 0.5s;
-        }
       }
     }
   }

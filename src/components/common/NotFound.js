@@ -3,7 +3,7 @@ import React from "react";
 function NotFound(props) {
   return (
     <>
-      <h1>404 Not Found</h1>
+      <div className="updating mt-5">持續更新中...</div>
     </>
   );
 }

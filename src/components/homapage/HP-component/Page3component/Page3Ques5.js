@@ -9,46 +9,42 @@ function Page3Ques5(props) {
       <div className="page3single ">
         <Page3Topic title="毛色" />
         <div className="d-flex justify-content-center">
-          <a
-            className="a mx-2"
-            href="##"
+          <div
+            className="mx-2 page3circle page3area"
             onClick={(e) => {
               switchColor(e.target);
               selectToggle(22);
             }}
           >
-            <div className="page3circle page3area">黑</div>
-          </a>
-          <a
-            className="a mx-2"
-            href="##"
+            黑
+          </div>
+          <div
+            className=" mx-2 page3circle page3area"
             onClick={(e) => {
               switchColor(e.target);
               selectToggle(23);
             }}
           >
-            <div className="page3circle page3area">白</div>
-          </a>
-          <a
-            className="a mx-2"
-            href="##"
+            白
+          </div>
+          <div
+            className="mx-2 page3circle page3area"
             onClick={(e) => {
               switchColor(e.target);
               selectToggle(24);
             }}
           >
-            <div className="page3circle page3area">灰</div>
-          </a>
-          <a
-            className="a mx-2"
-            href="##"
+            灰
+          </div>
+          <div
+            className="mx-2 page3circle page3area"
             onClick={(e) => {
               switchColor(e.target);
               selectToggle(25);
             }}
           >
-            <div className="page3circle page3area">黃</div>
-          </a>
+            黃
+          </div>
         </div>
       </div>
     </>

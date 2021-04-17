@@ -1,0 +1,11 @@
+.page3area {
+  font-size: 3.75rem;
+  font-family: $fontType2;
+  color: #fff1e6;
+
+  &:hover {
+    color: $secondary;
+    font-size: 4rem;
+    transition: 0.5s;
+  }
+}

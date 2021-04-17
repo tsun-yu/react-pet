@@ -1,0 +1,13 @@
+.page3gender {
+  svg {
+    fill: #fff1e6;
+    transition: 0.5s;
+  }
+}
+.page3genderClick {
+  cursor: pointer;
+  svg {
+    fill: $secondary;
+    transition: 0.5s;
+  }
+}

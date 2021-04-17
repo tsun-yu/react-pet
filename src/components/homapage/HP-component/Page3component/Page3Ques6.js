@@ -1,12 +1,13 @@
 import React from "react";
 import Page3Topic from "./Page3Topic";
-import { withRouter, useHistory } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 function Page3Ques6(props) {
   const { pet, select } = props;
-  const postDB = async (select) => {
+
+  const postResultToDB = async (select) => {
     const url = "http://localhost:3001/straymao/homepage/question";
     const data = { arr: select };
     const request = new Request(url, {
@@ -21,7 +22,7 @@ function Page3Ques6(props) {
       const response = await fetch(request);
       const data = await response.json();
       // data會是一個物件值
-      await console.log("lll:", data);
+      console.log("lll:", data);
     } catch (error) {
       //setError(error)
     }
@@ -32,12 +33,12 @@ function Page3Ques6(props) {
         <Page3Topic title="體型" />
         {pet}
       </div>
-      <a
+      <div
         onClick={() => {
           props.history.push("/adoptionmain");
         }}
       >
-        <div className="forward position-absolute d-flex flex-column justify-content-center align-items-center forward hvr-bounce-to-right">
+        <div className="forward position-absolute d-flex flex-column justify-content-center align-items-center hvr-bounce-to-right">
           <IoIosArrowDroprightCircle
             size="5rem"
             color=" #cb997e"
@@ -46,13 +47,13 @@ function Page3Ques6(props) {
           <div
             className="forward2adoption"
             onClick={() => {
-              postDB(select);
+              postResultToDB(select);
             }}
           >
             開 始 媒 合
           </div>
         </div>
-      </a>
+      </div>
     </>
   );
 }

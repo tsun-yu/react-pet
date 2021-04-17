@@ -1,0 +1,16 @@
+.forward {
+  &:hover {
+    .forward2 {
+      display: none;
+    }
+    .forward2adoption {
+      display: block;
+    }
+  }
+  .forward2adoption {
+    writing-mode: vertical-lr;
+    font-size: 2.125rem;
+    color: $secondary;
+    display: none;
+  }
+}

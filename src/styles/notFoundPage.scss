@@ -1,7 +1,11 @@
-.updating {
-  font: {
-    family: $fontType1, $fontType2, $fontType3;
-    size: 50px;
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .updating {
+    font: {
+      family: $fontType1, $fontType2, $fontType3;
+      size: 50px;
+    }
   }
-  text-align: center;
 }

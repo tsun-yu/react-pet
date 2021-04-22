@@ -1,17 +1,16 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
-// import { connect } from "react-redux";
+import { withRouter } from "react-router";
 
-function Page1Text1(props) {
+function Page1Text(props) {
+  const { des1, des2, class1 } = props;
   return (
     <>
       <div className="page1left-1">
-        <div className="page1des">Love them likes family.</div>
+        <div className={class1}>{des1}</div>
         <div className="page1des2 d-flex flex-column justify-content-around">
           <div className="hide">fuck</div>
-          <div>給他們一個機會, 擁有一個家。</div>
-          <a
-            href="##"
+          <div>{des2}</div>
+          <div
             onClick={() => {
               props.history.push("/adoptionmain");
             }}
@@ -20,16 +19,11 @@ function Page1Text1(props) {
             <div className="page1des3 mr-2 a hvr-underline-from-center">
               >了解更多
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </>
   );
 }
 
-// const mapStateToProps = (store) => {
-//   return {};
-// };
-// const mapDispatchToProps = null;
-
-export default withRouter(Page1Text1);
+export default withRouter(Page1Text);

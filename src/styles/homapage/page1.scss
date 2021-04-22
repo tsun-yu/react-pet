@@ -8,15 +8,15 @@
   margin-bottom: 20vh;
 
   .page1left {
-    margin-left: 10vw;
     width: 22.5rem;
-    overflow: hidden;
     height: 70vh;
     min-height: 34.375rem;
+    margin-left: 10vw;
+    overflow: hidden;
 
     .page1left-wrap {
       top: 0;
-      transition: 0.5s;
+      transition: 1s;
 
       .page1left-1 {
         width: 100%;
@@ -50,11 +50,15 @@
           .hide {
             visibility: hidden;
           }
-          .page1des3 {
-            font-size: 0.875rem;
-            color: $primary;
-            text-align: end;
-            transition: 0.5s;
+          .text-right {
+            cursor: pointer;
+
+            .page1des3 {
+              font-size: 0.875rem;
+              color: $primary;
+              text-align: end;
+              transition: 0.5s;
+            }
           }
         }
       }
@@ -76,7 +80,7 @@
       .page1img-wrap {
         width: 240vw;
         left: 0px;
-        transition: 1.3s;
+        transition: 0.5s;
 
         img {
           width: 60vw;

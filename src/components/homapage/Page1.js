@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Page1Carousel from "./HP-component/page1component/Page1Carousel";
-import Page1Text1 from "./HP-component/page1component/Page1Text1";
-import Page1Text2 from "./HP-component/page1component/Page1Text2";
+import Page1Text from "./HP-component/page1component/Page1Text";
 
 function Page1(props) {
   useEffect(() => {
@@ -12,7 +11,7 @@ function Page1(props) {
       let slide = newIndex * -70;
       document.querySelector(".page1left-wrap").style.top = slide + "vh";
       newIndex++;
-    }, 2000);
+    }, 1500);
     return () => {
       clearInterval(interval);
     };
@@ -68,10 +67,26 @@ function Page1(props) {
       <div className="d-flex page1 position-relative">
         <div className="page1left position-relative">
           <div className="position-absolute page1left-wrap">
-            <Page1Text1 />
-            <Page1Text2 />
-            <Page1Text1 />
-            <Page1Text2 />
+            <Page1Text
+              class1="page1des"
+              des1="Love them likes family."
+              des2="給他們一個機會, 擁有一個家。"
+            />
+            <Page1Text
+              class1="page1des sm"
+              des1="It's not coincidence about meet our furbaby."
+              des2="與毛孩的相遇，從來都不是巧合。"
+            />
+            <Page1Text
+              class1="page1des"
+              des1="Love them likes family."
+              des2="給他們一個機會, 擁有一個家。"
+            />
+            <Page1Text
+              class1="page1des sm"
+              des1="It's not coincidence about meet our furbaby."
+              des2="與毛孩的相遇，從來都不是巧合。"
+            />
           </div>
         </div>
         <div className="page1right position-absolute">

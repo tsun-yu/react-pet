@@ -1,18 +1,37 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 function Page1Carousel(props) {
   const { img1, img2, img3, img4 } = props;
 
+  const display = `<div class="d-flex page1img-wrap position-absolute">
+  <img src=${img1} alt="" />
+  <img src=${img2} alt="" />
+  <img src=${img3} alt="" />
+  <img src=${img4} alt="" />
+  <img src=${img1} alt="" />
+</div>`;
+
   useEffect(() => {
-    let newIndex = 0;
+    const slr = (id) => document.querySelector(id);
+    let newIndex = 1;
+    let slide = -60;
 
     const interval = setInterval(() => {
-      newIndex > 3 && (newIndex = 0);
-
-      let slide = newIndex * -60;
-      document.querySelector(".page1img-wrap").style.left = slide + "vw";
+      slr(".page1img-wrap").style.transform = `translate(${slide}vw, 0px)`;
       newIndex++;
-    }, 2000);
+      slide = newIndex * -60;
+
+      if (newIndex === 5) {
+        newIndex = 0;
+        slide = 0;
+
+        setTimeout(() => {
+          slr(".page1right-wrap").innerHTML = display;
+          slr(".page1img-wrap").style.transform = `translate(${slide}vw, 0px)`;
+        }, 1200);
+      }
+    }, 1500);
+
     return () => {
       clearInterval(interval);
     };
@@ -26,6 +45,7 @@ function Page1Carousel(props) {
           <img src={img2} alt="" />
           <img src={img3} alt="" />
           <img src={img4} alt="" />
+          <img src={img1} alt="" />
         </div>
       </div>
     </>

@@ -17,7 +17,7 @@ function Page1Carousel(props) {
           v.style.opacity = " 0.8";
         }
       });
-    }, 2000);
+    }, 3000);
 
     return () => {
       clearInterval(interval);

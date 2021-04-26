@@ -78,14 +78,10 @@
       min-height: 43.75rem;
 
       .page1img-wrap {
-        width: 240vw;
-        left: 0px;
-        transition: 0.5s;
-
         img {
           width: 60vw;
           object-fit: cover;
-          opacity: 0.8;
+          transition: 1s;
         }
       }
     }

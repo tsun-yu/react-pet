@@ -3,34 +3,21 @@ import React, { useEffect, useState } from "react";
 function Page1Carousel(props) {
   const { img1, img2, img3, img4 } = props;
 
-  const display = `<div class="d-flex page1img-wrap position-absolute">
-  <img src=${img1} alt="" />
-  <img src=${img2} alt="" />
-  <img src=${img3} alt="" />
-  <img src=${img4} alt="" />
-  <img src=${img1} alt="" />
-</div>`;
-
   useEffect(() => {
-    const slr = (id) => document.querySelector(id);
-    let newIndex = 1;
-    let slide = -60;
-
     const interval = setInterval(() => {
-      slr(".page1img-wrap").style.transform = `translate(${slide}vw, 0px)`;
-      newIndex++;
-      slide = newIndex * -60;
+      const styles = document.querySelectorAll(".carousel-img");
+      styles.forEach((v) => {
+        let opacity = +v.style.opacity;
+        let left = +v.style.left.split("vw")[0];
 
-      if (newIndex === 5) {
-        newIndex = 0;
-        slide = 0;
-
-        setTimeout(() => {
-          slr(".page1right-wrap").innerHTML = display;
-          slr(".page1img-wrap").style.transform = `translate(${slide}vw, 0px)`;
-        }, 1200);
-      }
-    }, 1500);
+        if (left === 0) {
+          opacity === 0 ? (v.style.left = "120vw") : (v.style.opacity = "0");
+        } else {
+          v.style.left = left - 60 + "vw";
+          v.style.opacity = " 0.8";
+        }
+      });
+    }, 3000);
 
     return () => {
       clearInterval(interval);
@@ -39,14 +26,31 @@ function Page1Carousel(props) {
 
   return (
     <>
-      <div className="page1right-wrap position-relative">
-        <div className="d-flex page1img-wrap position-absolute">
-          <img src={img1} alt="" />
-          <img src={img2} alt="" />
-          <img src={img3} alt="" />
-          <img src={img4} alt="" />
-          <img src={img1} alt="" />
-        </div>
+      <div className="d-flex position-relative carousel-area">
+        <img
+          src={img1}
+          className="position-absolute carousel-img"
+          style={{ left: "0vw", opacity: "0.8" }}
+          alt=""
+        />
+        <img
+          src={img2}
+          className="position-absolute carousel-img"
+          style={{ left: "60vw", opacity: "0.8" }}
+          alt=""
+        />
+        <img
+          src={img3}
+          className="position-absolute carousel-img"
+          style={{ left: "120vw", opacity: "0.8" }}
+          alt=""
+        />
+        <img
+          src={img4}
+          className="position-absolute carousel-img"
+          style={{ left: "180vw", opacity: "0.8" }}
+          alt=""
+        />
       </div>
     </>
   );

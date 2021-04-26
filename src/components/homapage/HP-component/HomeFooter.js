@@ -197,6 +197,7 @@ function HomeFooter() {
                 behavior: "smooth",
               });
             }}
+            className="goBackToTop"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

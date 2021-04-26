@@ -1,0 +1,49 @@
+#page1Text-2 {
+  opacity: 0;
+}
+.page1-text {
+  width: 100%;
+  height: 100%;
+  min-height: 34.375rem;
+  transition: 1s;
+  position: absolute;
+
+  .page1des {
+    color: $primary;
+    padding-top: 15vh;
+    margin-bottom: 10%;
+    font: {
+      size: 3rem;
+      family: $fontType3;
+      weight: lighter;
+    }
+  }
+  .sm {
+    font-size: 2.5rem;
+  }
+  .page1des2 {
+    width: 100%;
+    height: 10rem;
+    background-color: #f0efeb;
+    color: #707070;
+    text-align: center;
+    font: {
+      size: 1.25rem;
+      family: $fontType1;
+    }
+
+    .hide {
+      visibility: hidden;
+    }
+    .text-right {
+      cursor: pointer;
+
+      .page1des3 {
+        font-size: 0.875rem;
+        color: $primary;
+        text-align: end;
+        transition: 0.5s;
+      }
+    }
+  }
+}

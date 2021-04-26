@@ -1,18 +1,22 @@
 import React, { useEffect } from "react";
 import Page1Carousel from "./HP-component/page1component/Page1Carousel";
-import Page1Text1 from "./HP-component/page1component/Page1Text1";
-import Page1Text2 from "./HP-component/page1component/Page1Text2";
+import Page1Text from "./HP-component/page1component/Page1Text";
 
 function Page1(props) {
   useEffect(() => {
-    let newIndex = 0;
+    let index = 1;
 
     const interval = setInterval(() => {
-      newIndex > 3 && (newIndex = 0);
-      let slide = newIndex * -70;
-      document.querySelector(".page1left-wrap").style.top = slide + "vh";
-      newIndex++;
-    }, 2000);
+      if (index === 1) {
+        document.querySelector("#page1Text-1").style.opacity = "0";
+        document.querySelector("#page1Text-2").style.opacity = "1";
+        index = 2;
+      } else {
+        document.querySelector("#page1Text-1").style.opacity = "1";
+        document.querySelector("#page1Text-2").style.opacity = "0";
+        index = 1;
+      }
+    }, 3000);
     return () => {
       clearInterval(interval);
     };
@@ -65,16 +69,25 @@ function Page1(props) {
           />
         </g>
       </svg>
-      <div className="d-flex page1 position-relative">
-        <div className="page1left position-relative">
-          <div className="position-absolute page1left-wrap">
-            <Page1Text1 />
-            <Page1Text2 />
-            <Page1Text1 />
-            <Page1Text2 />
-          </div>
+      <div className="d-flex page1">
+        {/* Text */}
+        <div className="page1left">
+          <Page1Text
+            class1="page1des"
+            des1="Love them likes family."
+            des2="給他們一個機會, 擁有一個家。"
+            id="page1Text-1"
+          />
+          <Page1Text
+            id="page-text2"
+            class1="page1des sm"
+            des1="It's not coincidence about meet our furbaby."
+            des2="與毛孩的相遇，從來都不是巧合。"
+            id="page1Text-2"
+          />
         </div>
-        <div className="page1right position-absolute">
+        {/* Carousel */}
+        <div className="page1right">
           <Page1Carousel
             img1="../../image/homepage/homepage1-1.png"
             img2="../../image/homepage/homepage1-2.png"

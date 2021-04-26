@@ -1,0 +1,12 @@
+.carousel-area {
+  width: 60vw;
+  height: 87vh;
+  overflow: hidden;
+  min-height: 43.75rem;
+
+  img {
+    width: 60vw;
+    object-fit: cover;
+    transition: 1s;
+  }
+}

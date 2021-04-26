@@ -1,3 +1,6 @@
+@import "./page1/carousel.scss";
+@import "./page1/page1-text";
+
 .page1scroll {
   bottom: 0;
   left: 10vh;
@@ -8,57 +11,12 @@
   margin-bottom: 20vh;
 
   .page1left {
-    margin-left: 10vw;
     width: 22.5rem;
-    overflow: hidden;
     height: 70vh;
     min-height: 34.375rem;
-
-    .page1left-wrap {
-      top: 0;
-      transition: 0.5s;
-
-      .page1left-1 {
-        width: 100%;
-        height: 100%;
-        min-height: 34.375rem;
-
-        .page1des {
-          color: $primary;
-          padding-top: 15vh;
-          margin-bottom: 10%;
-          font: {
-            size: 3rem;
-            family: $fontType3;
-            weight: lighter;
-          }
-        }
-        .sm {
-          font-size: 2.5rem;
-        }
-        .page1des2 {
-          width: 100%;
-          height: 10rem;
-          background-color: #f0efeb;
-          color: #707070;
-          text-align: center;
-          font: {
-            size: 1.25rem;
-            family: $fontType1;
-          }
-
-          .hide {
-            visibility: hidden;
-          }
-          .page1des3 {
-            font-size: 0.875rem;
-            color: $primary;
-            text-align: end;
-            transition: 0.5s;
-          }
-        }
-      }
-    }
+    margin-left: 10vw;
+    overflow: hidden;
+    position: relative;
   }
   .page1right {
     margin-left: 5vw;
@@ -66,24 +24,5 @@
     background-color: #fff;
     z-index: 1;
     right: 0;
-
-    .page1right-wrap {
-      width: 60vw;
-      height: 87vh;
-      overflow: hidden;
-      min-height: 43.75rem;
-
-      .page1img-wrap {
-        width: 240vw;
-        left: 0px;
-        transition: 1.3s;
-
-        img {
-          width: 60vw;
-          object-fit: cover;
-          opacity: 0.8;
-        }
-      }
-    }
   }
 }
